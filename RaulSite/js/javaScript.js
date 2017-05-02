@@ -26,14 +26,20 @@ $(document).ready(function(){
 $('#dispStats').click(function() {
 	$('#stats').toggle(1000);
 	var dis = $('#dispStats').html();
-	if (dis == "Show Stats"){
-		$('#dispStats').html("Hide Stats");
+	if (dis == "Click Here to Show Stats"){
+		$('#dispStats').html("Click Here to Hide Stats");
 	} else
-		$('#dispStats').html("Show Stats");
+		$('#dispStats').html("Click Here to Show Stats");
 });
 
-$('#raulDiv').click(function() {
-    $('#ironDiv').fadeIn(500);
+$('#myPic').click(function() {
+    $(this).fadeUp(500, function(){
+    	var src = ($(this).attr('src') === 'pics/ironman.jpg')
+        ? 'pics/raulpic.jpg'
+        : 'pics/ironman.jpg';
+     $(this).attr('src', src);
+    		});
+    $(this).fadeDown(500);
 });
 
 $('#ironDiv').click(function() {
