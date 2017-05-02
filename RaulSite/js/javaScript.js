@@ -33,13 +33,13 @@ $('#dispStats').click(function() {
 });
 
 $('#myPic').click(function() {
-    $(this).fadeUp(500, function(){
+    $(this).fadeOut(500, function(){
     	var src = ($(this).attr('src') === 'pics/ironman.jpg')
         ? 'pics/raulpic.jpg'
         : 'pics/ironman.jpg';
      $(this).attr('src', src);
     		});
-    $(this).fadeDown(500);
+    $(this).fadeIn(500);
 });
 
 $('#ironDiv').click(function() {
